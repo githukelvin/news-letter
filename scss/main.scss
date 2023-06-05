@@ -1,0 +1,93 @@
+@forward "./partials/";
+@use "./partials/colors" as c;
+@use "./partials/fonts" ;
+
+.component{
+    background: c.$White;
+    margin-inline: auto;
+    width: 64.2%;
+    border-radius: 30px;
+    padding: 22px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 640px;
+    gap:3em;
+
+    .left{
+        padding: 4.3em 0 0 2.6em;
+        width: 100%;
+        h1{
+            font-family: 'bold' ;
+            font-size: 3.5em;
+            color: c.$DarkSlateGrey;
+            margin-bottom: .38em;
+        }
+         p{
+            font-family: 'regular';
+            font-size: 1em;
+            line-height: 1.4;
+            color: c.$CharcoalGrey;
+            padding-bottom: 1.6em;
+
+         } 
+         ul{
+            list-style: none;
+            li{
+                display: flex;
+                flex-direction: row;
+                gap:15px;
+                font-family: 'regular';
+                padding-bottom: .9em;
+
+            
+            }
+         } 
+         form{ 
+            display: flex;
+            flex-direction: column;
+            margin-top: 1.7em;
+            label{
+                font-family: 'bold';
+                font-weight: 700;
+                font-size: .75em;
+                color: c.$DarkSlateGrey;
+                padding-bottom: .9em;
+            }
+            input[type="email"]{
+                border: 1px solid c.$Grey;
+                outline: none;
+                border-radius: 10px;
+                padding-block: 1.1em;
+                padding-inline: 2em;
+                font-family: 'regular';
+                font-size: 1em;
+                margin-bottom: 1.4em;
+
+                &::placeholder{
+                    font-family: 'regular';
+                    font-size: 1em;
+                    color: c.$Grey;
+                    padding-left: 1.5em;
+                }
+
+            } 
+            input[type="submit"]{
+                width: 100%;
+                background: c.$DarkSlateGrey;
+                border: none;
+                border-radius: 10px;
+                color: c.$White;
+                padding-block: 1.2em;
+                font-family: 'bold';
+                font-size: 1em;
+                // padding-top: ;
+            }
+            }
+    }
+    .right{
+        background: url("../assets/images/illustration-sign-up-desktop.svg");
+        border-radius: 15px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}

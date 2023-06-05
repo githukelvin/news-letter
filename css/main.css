@@ -1,1 +1,111 @@
-/*# sourceMappingURL=main.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.container {
+  margin-inline: auto;
+  background: hsl(234, 29%, 20%);
+  max-width: 1440px;
+  height: 100%;
+  padding-block: 13.7rem;
+}
+
+@font-face {
+  font-family: "bold";
+  src: url("../assets/fonts/Roboto-Bold.woff2") format("woff2"), url("../assets/fonts/Roboto-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "regular";
+  src: url("../assets/fonts/Roboto-Regular.woff2") format("woff2"), url("../assets/fonts/Roboto-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+.component {
+  background: hsl(0, 0%, 100%);
+  margin-inline: auto;
+  width: 64.2%;
+  border-radius: 30px;
+  padding: 22px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 640px;
+  gap: 3em;
+}
+.component .left {
+  padding: 4.3em 0 0 2.6em;
+  width: 100%;
+}
+.component .left h1 {
+  font-family: "bold";
+  font-size: 3.5em;
+  color: hsl(234, 29%, 20%);
+  margin-bottom: 0.38em;
+}
+.component .left p {
+  font-family: "regular";
+  font-size: 1em;
+  line-height: 1.4;
+  color: hsl(235, 18%, 26%);
+  padding-bottom: 1.6em;
+}
+.component .left ul {
+  list-style: none;
+}
+.component .left ul li {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  font-family: "regular";
+  padding-bottom: 0.9em;
+}
+.component .left form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.7em;
+}
+.component .left form label {
+  font-family: "bold";
+  font-weight: 700;
+  font-size: 0.75em;
+  color: hsl(234, 29%, 20%);
+  padding-bottom: 0.9em;
+}
+.component .left form input[type=email] {
+  border: 1px solid hsl(231, 7%, 60%);
+  outline: none;
+  border-radius: 10px;
+  padding-block: 1.1em;
+  padding-inline: 2em;
+  font-family: "regular";
+  font-size: 1em;
+  margin-bottom: 1.4em;
+}
+.component .left form input[type=email]::placeholder {
+  font-family: "regular";
+  font-size: 1em;
+  color: hsl(231, 7%, 60%);
+  padding-left: 1.5em;
+}
+.component .left form input[type=submit] {
+  width: 100%;
+  background: hsl(234, 29%, 20%);
+  border: none;
+  border-radius: 10px;
+  color: hsl(0, 0%, 100%);
+  padding-block: 1.2em;
+  font-family: "bold";
+  font-size: 1em;
+}
+.component .right {
+  background: url("../assets/images/illustration-sign-up-desktop.svg");
+  border-radius: 15px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}/*# sourceMappingURL=main.css.map */
