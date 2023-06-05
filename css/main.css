@@ -36,7 +36,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 640px;
-  gap: 3em;
+  gap: 2.7em;
 }
 .component .left {
   padding: 4.3em 0 0 2.6em;
@@ -82,7 +82,6 @@
   outline: none;
   border-radius: 10px;
   padding-block: 1.1em;
-  padding-inline: 2em;
   font-family: "regular";
   font-size: 1em;
   margin-bottom: 1.4em;
@@ -99,13 +98,15 @@
   border: none;
   border-radius: 10px;
   color: hsl(0, 0%, 100%);
-  padding-block: 1.2em;
+  padding-block: 1.22em;
   font-family: "bold";
   font-size: 1em;
 }
 .component .right {
+  width: 400px;
   background: url("../assets/images/illustration-sign-up-desktop.svg");
   border-radius: 15px;
-  background-size: contain;
+  background-size: cover;
+  margin-left: 20px;
   background-repeat: no-repeat;
 }/*# sourceMappingURL=main.css.map */
