@@ -53,6 +53,7 @@
   font-size: 1em;
   line-height: 1.4;
   color: hsl(235, 18%, 26%);
+  font-weight: 500;
   padding-bottom: 1.6em;
 }
 .component .left ul {
@@ -109,4 +110,51 @@
   background-size: cover;
   margin-left: 20px;
   background-repeat: no-repeat;
+}
+
+.sucess {
+  background: hsl(0, 0%, 100%);
+  width: 500px;
+  margin-inline: auto;
+  border-radius: 30px;
+  margin-top: 3.75rem;
+  display: flex;
+  flex-direction: column;
+  padding: 3.1em 3.9em 3.9em;
+}
+.sucess .img {
+  width: 63px;
+  height: 63px;
+  background: url("../assets/images/icon-success.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.sucess h1 {
+  font-family: "bold";
+  font-size: 3.47em;
+  color: hsl(234, 29%, 20%);
+  padding-top: 0.69em;
+  line-height: 1.05;
+}
+.sucess p {
+  font-family: "regular";
+  font-size: 1em;
+  padding-top: 1.49em;
+  line-height: 1.42;
+  padding-bottom: 2.6em;
+}
+.sucess p span {
+  font-family: "bold";
+  font-size: 1em;
+  color: hsl(234, 29%, 20%);
+}
+.sucess button {
+  border: none;
+  background: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+  font-size: 1em;
+  font-family: "bold";
+  border-radius: 10px;
+  padding-block: 1.19em;
 }/*# sourceMappingURL=main.css.map */

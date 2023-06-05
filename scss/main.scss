@@ -27,6 +27,7 @@
             font-size: 1em;
             line-height: 1.4;
             color: c.$CharcoalGrey;
+            font-weight: 500;
             padding-bottom: 1.6em;
 
          } 
@@ -91,5 +92,59 @@
         background-size: cover;
        margin-left: 20px;
         background-repeat: no-repeat;
+    }
+}
+
+.sucess{
+    background: c.$White;
+    width: 500px;
+    margin-inline: auto;
+    border-radius: 30px;
+    margin-top: 3.75rem;
+    display: flex;
+    flex-direction: column;
+    padding: 3.1em 3.9em 3.9em;
+
+
+    .img{
+        $siz:63px;
+        width: $siz;
+        height:$siz;
+        background: url("../assets/images/icon-success.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+    h1{
+        font-family: 'bold';
+        font-size: 3.47em;
+        // margin-left: -2px;
+        color: c.$DarkSlateGrey;
+        padding-top: .69em;
+        line-height: 1.05;
+      
+    }
+    p{
+        font-family: 'regular';
+        font-size: 1em;
+        padding-top: 1.49em;
+        line-height: 1.42;
+        padding-bottom: 2.6em;
+
+        span{
+            font-family: 'bold';
+            font-size: 1em;
+            color: c.$DarkSlateGrey;
+
+        }
+    }
+    button{
+        border:  none;
+        background: c.$DarkSlateGrey;
+        color: c.$White;
+        font-size: 1em;
+        font-family: 'bold';
+        border-radius: 10px;
+        padding-block: 1.19em;
     }
 }
