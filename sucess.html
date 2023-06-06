@@ -44,13 +44,18 @@
                   Please open it and click the button inside to confirm your subscription.
                 </p>
 
-                <button>Dismiss message</button>
+                <button id="diss">Dismiss message</button>
 
                 <!-- Success message end -->
             </div>
 
         </div>
     </main>
-    
+<script>
+    const diss = document.getElementById("diss");
+    diss.addEventListener("click",()=>{
+    window.location.href="../index.html" ;
+    })
+</script>
 </body>
 </html>

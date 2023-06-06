@@ -8,11 +8,7 @@
   
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+
   <!-- link to css  -->
   <link rel="stylesheet" href="./css/main.css">
   <!-- link to custom fonts -->
@@ -38,9 +34,12 @@
       </ul>
       
       <form action="">
-        <label for="email">Email address</label>
+        <div class="labels">
+          <label for="email">Email address</label>
+          <label id="error" for="email">Valid email required</label>
+        </div>
         <input type="email" name="email" id="email" placeholder="email@company.com">
-        <input type="submit" value="Subscribe to monthly newsletter">
+        <input type="submit" id="submit" value="Subscribe to monthly newsletter">
       </form>
 
       
@@ -58,8 +57,10 @@
 <footer>
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="https://dev.to/githukelvin">githu kelvin</a>.
     </div>
 </footer>
+<!-- script -->
+<script src="./JS/main.js"></script>
 </body>
 </html>

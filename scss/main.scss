@@ -1,6 +1,7 @@
 @forward "./partials/";
 @use "./partials/colors" as c;
 @use "./partials/fonts" ;
+@use "./partials/mixins" as *;
 
 .component{
     background: c.$White;
@@ -13,14 +14,38 @@
     height: 640px;
     gap:2.7em;
 
+    @include responsive(375px){
+       display: flex;
+       width: 100%;
+       flex-direction: column-reverse;
+       padding: 0;
+       gap: 2.3em;
+       height: fit-content;
+         
+
+    }
+
     .left{
         padding: 4.3em 0 0 2.6em;
         width: 100%;
+        // include
+
+        @include responsive(375px){
+            margin-inline: auto;
+            padding: 0;
+            margin-bottom: 2.7em;
+            width: 88%;
+
+        }
         h1{
             font-family: 'bold' ;
             font-size: 3.5em;
             color: c.$DarkSlateGrey;
             margin-bottom: .38em;
+            @include responsive(375px){
+                font-size: 2.5em;
+                margin-bottom: .5em;
+            }
         }
          p{
             font-family: 'regular';
@@ -29,6 +54,11 @@
             color: c.$CharcoalGrey;
             font-weight: 500;
             padding-bottom: 1.6em;
+            @include responsive(375px){
+                line-height: 1.5;
+                // padding-bottom: em;
+
+            }
 
          } 
          ul{
@@ -40,26 +70,36 @@
                 font-family: 'regular';
                 padding-bottom: .9em;
 
-            
+            @include 
             }
          } 
          form{ 
             display: flex;
             flex-direction: column;
             margin-top: 1.7em;
-            label{
-                font-family: 'bold';
-                font-weight: 700;
-                font-size: .75em;
-                color: c.$DarkSlateGrey;
-                padding-bottom: .9em;
+            .labels{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+             padding-bottom: .9em;
+
+                label {
+                    font-family: 'bold';
+                    font-weight: 700;
+                    font-size: .75em;
+                    color: c.$DarkSlateGrey;
+                }
+                #error{
+                    color: c.$Tomato;
+                    display: none;
+                }
             }
             input[type="email"]{
                 border: 1px solid c.$Grey;
                 outline: none;
                 border-radius: 10px;
                 padding-block: 1.1em;
-                // padding-inline: 2em;
+                padding-inline: 2em;
                 font-family: 'regular';
                 font-size: 1em;
                 margin-bottom: 1.4em;
@@ -68,7 +108,16 @@
                     font-family: 'regular';
                     font-size: 1em;
                     color: c.$Grey;
-                    padding-left: 1.5em;
+                    // padding-left: 1.5em;
+                }
+                &.error{
+                    border: 1px solid c.$Tomato;
+                    color: c.$Tomato;
+                   
+                }
+                &:focus{
+                    border: 1px solid c.$DarkSlateGrey;
+                    color: c.$DarkSlateGrey;
                 }
 
             } 
@@ -81,7 +130,12 @@
                 padding-block: 1.22em;
                 font-family: 'bold';
                 font-size: 1em;
-                // padding-top: ;
+                cursor: pointer;
+
+                &:hover{
+                    background: c.$Tomato;
+                    transition: .5s background;
+                }
             }
             }
     }
@@ -90,8 +144,21 @@
         background: url("../assets/images/illustration-sign-up-desktop.svg");
         border-radius: 15px;
         background-size: cover;
-       margin-left: 20px;
+        margin-left: 20px;
         background-repeat: no-repeat;
+        @include responsive(375px){
+            width: 100%;
+            margin: 0;
+            height: 284px;
+            border-radius: 0;
+            background-position: center;
+            background-repeat: no-repeat;
+            background: url("../assets/images/illustration-sign-up-mobile.svg");
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+
+        }
+       
     }
 }
 
@@ -146,5 +213,21 @@
         font-family: 'bold';
         border-radius: 10px;
         padding-block: 1.19em;
+        cursor: pointer;
+        &:hover{
+            background: c.$Tomato;
+            transition: .5s background;
+        }
+    }
+}
+footer{
+    .attribution {
+        font-size: 11px;
+        text-align: center;
+        font-family: 'bold';
+    }
+
+    .attribution a {
+        color: hsl(228, 45%, 44%);
     }
 }

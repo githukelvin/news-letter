@@ -12,6 +12,13 @@
   height: 100%;
   padding-block: 13.7rem;
 }
+@media screen and (max-width: 375px) {
+  .container {
+    width: 100%;
+    background: hsl(0, 0%, 100%);
+    padding: 0;
+  }
+}
 
 @font-face {
   font-family: "bold";
@@ -38,15 +45,39 @@
   height: 640px;
   gap: 2.7em;
 }
+@media screen and (max-width: 375px) {
+  .component {
+    display: flex;
+    width: 100%;
+    flex-direction: column-reverse;
+    padding: 0;
+    gap: 2.3em;
+    height: fit-content;
+  }
+}
 .component .left {
   padding: 4.3em 0 0 2.6em;
   width: 100%;
+}
+@media screen and (max-width: 375px) {
+  .component .left {
+    margin-inline: auto;
+    padding: 0;
+    margin-bottom: 2.7em;
+    width: 88%;
+  }
 }
 .component .left h1 {
   font-family: "bold";
   font-size: 3.5em;
   color: hsl(234, 29%, 20%);
   margin-bottom: 0.38em;
+}
+@media screen and (max-width: 375px) {
+  .component .left h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+  }
 }
 .component .left p {
   font-family: "regular";
@@ -55,6 +86,11 @@
   color: hsl(235, 18%, 26%);
   font-weight: 500;
   padding-bottom: 1.6em;
+}
+@media screen and (max-width: 375px) {
+  .component .left p {
+    line-height: 1.5;
+  }
 }
 .component .left ul {
   list-style: none;
@@ -71,18 +107,28 @@
   flex-direction: column;
   margin-top: 1.7em;
 }
-.component .left form label {
+.component .left form .labels {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 0.9em;
+}
+.component .left form .labels label {
   font-family: "bold";
   font-weight: 700;
   font-size: 0.75em;
   color: hsl(234, 29%, 20%);
-  padding-bottom: 0.9em;
+}
+.component .left form .labels #error {
+  color: hsl(4, 100%, 67%);
+  display: none;
 }
 .component .left form input[type=email] {
   border: 1px solid hsl(231, 7%, 60%);
   outline: none;
   border-radius: 10px;
   padding-block: 1.1em;
+  padding-inline: 2em;
   font-family: "regular";
   font-size: 1em;
   margin-bottom: 1.4em;
@@ -91,7 +137,14 @@
   font-family: "regular";
   font-size: 1em;
   color: hsl(231, 7%, 60%);
-  padding-left: 1.5em;
+}
+.component .left form input[type=email].error {
+  border: 1px solid hsl(4, 100%, 67%);
+  color: hsl(4, 100%, 67%);
+}
+.component .left form input[type=email]:focus {
+  border: 1px solid hsl(234, 29%, 20%);
+  color: hsl(234, 29%, 20%);
 }
 .component .left form input[type=submit] {
   width: 100%;
@@ -102,6 +155,11 @@
   padding-block: 1.22em;
   font-family: "bold";
   font-size: 1em;
+  cursor: pointer;
+}
+.component .left form input[type=submit]:hover {
+  background: hsl(4, 100%, 67%);
+  transition: 0.5s background;
 }
 .component .right {
   width: 400px;
@@ -110,6 +168,19 @@
   background-size: cover;
   margin-left: 20px;
   background-repeat: no-repeat;
+}
+@media screen and (max-width: 375px) {
+  .component .right {
+    width: 100%;
+    margin: 0;
+    height: 284px;
+    border-radius: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background: url("../assets/images/illustration-sign-up-mobile.svg");
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
 }
 
 .sucess {
@@ -157,4 +228,18 @@
   font-family: "bold";
   border-radius: 10px;
   padding-block: 1.19em;
+  cursor: pointer;
+}
+.sucess button:hover {
+  background: hsl(4, 100%, 67%);
+  transition: 0.5s background;
+}
+
+footer .attribution {
+  font-size: 11px;
+  text-align: center;
+  font-family: "bold";
+}
+footer .attribution a {
+  color: hsl(228, 45%, 44%);
 }/*# sourceMappingURL=main.css.map */
