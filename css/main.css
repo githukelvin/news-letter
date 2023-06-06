@@ -12,7 +12,7 @@
   height: 100%;
   padding-block: 13.7rem;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 450px) {
   .container {
     width: 100%;
     background: hsl(0, 0%, 100%);
@@ -45,7 +45,7 @@
   height: 640px;
   gap: 2.7em;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 450px) {
   .component {
     display: flex;
     width: 100%;
@@ -56,16 +56,30 @@
     padding-bottom: 1.5em;
   }
 }
+@media screen and (max-width: 850px) {
+  .component {
+    width: 90%;
+    margin-inline: auto;
+    height: fit-content;
+  }
+}
 .component .left {
   padding: 4.3em 0 0 2.6em;
   width: 100%;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 450px) {
   .component .left {
     margin-inline: auto;
     padding: 0;
     margin-bottom: 2.7em;
     width: 88%;
+  }
+}
+@media screen and (max-width: 850px) {
+  .component .left {
+    width: 100%;
+    margin-inline: auto;
+    padding: 0;
   }
 }
 .component .left h1 {
@@ -74,10 +88,15 @@
   color: hsl(234, 29%, 20%);
   margin-bottom: 0.38em;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 450px) {
   .component .left h1 {
     font-size: 2.5em;
     margin-bottom: 0.5em;
+  }
+}
+@media screen and (max-width: 850px) {
+  .component .left h1 {
+    font-size: 3em;
   }
 }
 .component .left p {
@@ -88,7 +107,7 @@
   font-weight: 500;
   padding-bottom: 1.6em;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 450px) {
   .component .left p {
     line-height: 1.5;
   }
@@ -105,7 +124,7 @@
   padding-bottom: 0.9em;
   position: relative;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 450px) {
   .component .left ul li {
     line-height: 1.35;
     gap: 17px;
@@ -126,7 +145,7 @@
   justify-content: space-between;
   padding-bottom: 0.9em;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 450px) {
   .component .left form .labels {
     padding-bottom: 0.7em;
   }
@@ -137,7 +156,7 @@
   font-size: 0.75em;
   color: hsl(234, 29%, 20%);
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 450px) {
   .component .left form .labels label {
     font-size: 0.77em;
   }
@@ -156,7 +175,7 @@
   font-size: 1em;
   margin-bottom: 1.4em;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 450px) {
   .component .left form input[type=email] {
     padding-inline: 1.5em;
   }
@@ -193,11 +212,11 @@
   width: 400px;
   background: url("../assets/images/illustration-sign-up-desktop.svg");
   border-radius: 15px;
-  background-size: cover;
+  background-size: contain;
   margin-left: 20px;
   background-repeat: no-repeat;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 450px) {
   .component .right {
     width: 100%;
     margin: 0;
@@ -208,6 +227,12 @@
     background: url("../assets/images/illustration-sign-up-mobile.svg");
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .component .right {
+    width: 100%;
+    margin-inline: auto;
   }
 }
 
@@ -221,7 +246,7 @@
   flex-direction: column;
   padding: 3.1em 3.9em 3.9em;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 450px) {
   .sucess {
     padding: 0;
     width: 88%;
@@ -243,7 +268,7 @@
   padding-top: 0.69em;
   line-height: 1.05;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 450px) {
   .sucess h1 {
     font-size: 2.5em;
     padding-top: 1em;
@@ -256,7 +281,7 @@
   line-height: 1.42;
   padding-bottom: 2.6em;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 450px) {
   .sucess p {
     line-height: 1.44;
     padding-top: 1.47;
@@ -281,7 +306,7 @@
   background: hsl(4, 100%, 67%);
   transition: 0.5s background;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 450px) {
   .sucess button {
     display: none;
   }
