@@ -58,7 +58,6 @@
 }
 @media screen and (max-width: 850px) {
   .component {
-    width: 90%;
     margin-inline: auto;
     height: fit-content;
   }
@@ -77,7 +76,6 @@
 }
 @media screen and (max-width: 850px) {
   .component .left {
-    width: 100%;
     margin-inline: auto;
     padding: 0;
   }
