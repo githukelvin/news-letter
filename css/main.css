@@ -53,6 +53,7 @@
     padding: 0;
     gap: 2.3em;
     height: fit-content;
+    padding-bottom: 1.5em;
   }
 }
 .component .left {
@@ -99,8 +100,20 @@
   display: flex;
   flex-direction: row;
   gap: 15px;
+  align-items: center;
   font-family: "regular";
   padding-bottom: 0.9em;
+  position: relative;
+}
+@media screen and (max-width: 375px) {
+  .component .left ul li {
+    line-height: 1.35;
+    gap: 17px;
+  }
+  .component .left ul li .top {
+    position: relative;
+    top: -11px;
+  }
 }
 .component .left form {
   display: flex;
@@ -113,11 +126,21 @@
   justify-content: space-between;
   padding-bottom: 0.9em;
 }
+@media screen and (max-width: 375px) {
+  .component .left form .labels {
+    padding-bottom: 0.7em;
+  }
+}
 .component .left form .labels label {
   font-family: "bold";
   font-weight: 700;
   font-size: 0.75em;
   color: hsl(234, 29%, 20%);
+}
+@media screen and (max-width: 375px) {
+  .component .left form .labels label {
+    font-size: 0.77em;
+  }
 }
 .component .left form .labels #error {
   color: hsl(4, 100%, 67%);
@@ -132,6 +155,11 @@
   font-family: "regular";
   font-size: 1em;
   margin-bottom: 1.4em;
+}
+@media screen and (max-width: 375px) {
+  .component .left form input[type=email] {
+    padding-inline: 1.5em;
+  }
 }
 .component .left form input[type=email]::placeholder {
   font-family: "regular";
@@ -193,6 +221,13 @@
   flex-direction: column;
   padding: 3.1em 3.9em 3.9em;
 }
+@media screen and (max-width: 375px) {
+  .sucess {
+    padding: 0;
+    width: 88%;
+    padding-top: 5.5em;
+  }
+}
 .sucess .img {
   width: 63px;
   height: 63px;
@@ -208,12 +243,24 @@
   padding-top: 0.69em;
   line-height: 1.05;
 }
+@media screen and (max-width: 375px) {
+  .sucess h1 {
+    font-size: 2.5em;
+    padding-top: 1em;
+  }
+}
 .sucess p {
   font-family: "regular";
   font-size: 1em;
   padding-top: 1.49em;
   line-height: 1.42;
   padding-bottom: 2.6em;
+}
+@media screen and (max-width: 375px) {
+  .sucess p {
+    line-height: 1.44;
+    padding-top: 1.47;
+  }
 }
 .sucess p span {
   font-family: "bold";
@@ -233,6 +280,11 @@
 .sucess button:hover {
   background: hsl(4, 100%, 67%);
   transition: 0.5s background;
+}
+@media screen and (max-width: 375px) {
+  .sucess button {
+    display: none;
+  }
 }
 
 footer .attribution {
